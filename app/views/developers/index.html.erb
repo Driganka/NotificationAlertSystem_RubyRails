@@ -1,0 +1,32 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Developers</h1>
+
+
+<table class="table table-striped table-bordered table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th>Name</th>
+        <th>ID</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Department</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @developers.each do |developer| %>
+        <tr>
+          <td>
+            <%= link_to developer.devname , developer %>
+          </td>
+          <td><%= developer.devid %></td>
+          <td><%= developer.phone %></td>
+          <td><%= developer.email %></td>
+          <td><%= developer.dptid %></td>
+          </tr>
+      <% end %>
+    </tbody>
+</table>
+
+<%= link_to "New developer", new_developer_path, class:'btn btn-secondary' %>
