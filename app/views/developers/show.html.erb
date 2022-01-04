@@ -3,8 +3,8 @@
 <%= render @developer %>
 
 <div>
-  <%= link_to "Edit this developer", edit_developer_path(@developer) %> |
-  <%= link_to "Back to developers", developers_path %>
-
-  <%= button_to "Destroy this developer", @developer, method: :delete, class:'btn btn-danger' %>
+  <%= link_to "Edit", edit_developer_path(@developer), class:'btn btn-warning' %>
+  <%= link_to "Back", developers_path, class:'btn btn-secondary' %>
+  <br/><br/>
+  <%= button_to "Destroy", @developer, method: :delete, class:'btn btn-danger' %>
 </div>

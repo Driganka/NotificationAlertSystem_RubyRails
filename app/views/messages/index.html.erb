@@ -19,8 +19,10 @@
           <td>
             <%= link_to message.title , message %>
           </td>
-          <td><%= message.devid %></td>
-          <td><%= message.phone %></td>
+          <td><%= message.content %></td>
+          <td>
+            <%= link_to message.dptidtosend , departments_url %>
+          </td>
           <td>
             <%= link_to message.msgid , message %>
           </td>
@@ -29,4 +31,4 @@
     </tbody>
 </table>
 
-<%= link_to "New Message", new_message_path, class:'btn btn-secondary' %>
+<%= link_to "New Message", new_message_path, class:'btn btn-primary' %>

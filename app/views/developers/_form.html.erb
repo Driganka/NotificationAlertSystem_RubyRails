@@ -10,33 +10,28 @@
       </ul>
     </div>
   <% end %>
-
-  <div>
-    <%= form.label :devname, style: "display: block" %>
-    <%= form.text_field :devname %>
+  <br/>
+  <div class ="field form-group">
+    <%= form.text_field :devname, class:'form-control', placeholder:'Enter Developer Name' %>
   </div>
-
-  <div>
-    <%= form.label :devid, style: "display: block" %>
-    <%= form.text_field :devid %>
+  <br/>
+  <div class ="field form-group">
+    <%= form.text_field :devid, class:'form-control', placeholder:'Enter Developer ID' %>
   </div>
-
-  <div>
-    <%= form.label :dptid, style: "display: block" %>
-    <%= form.text_field :dptid %>
+  <br/>
+  <div class ="field form-group">
+    <%= form.text_field :dptid, class:'form-control', placeholder:'Enter Department ID' %>
   </div>
-
-  <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
+  <br/>
+  <div class ="field form-group">
+    <%= form.text_field :email, class:'form-control', placeholder:'Enter Mail' %>
   </div>
-
-  <div>
-    <%= form.label :phone, style: "display: block" %>
-    <%= form.text_field :phone %>
+  <br/>
+  <div class ="field form-group">
+    <%= form.text_field :phone, class:'form-control', placeholder:'Enter Phone' %>
   </div>
-
-  <div>
-    <%= form.submit %>
+  <br/>
+  <div class="actions">
+    <%= form.submit class:'btn btn-success'%>
   </div>
 <% end %>
