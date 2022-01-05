@@ -25,6 +25,10 @@ class DevelopersController < ApplicationController
 
     respond_to do |format|
       if @developer.save
+
+        #Tell the DeveloperMailer to send a Wekcome Email after save
+        DeveloperMailer.welcome_email(@developer).deviver
+        
         format.html { redirect_to developer_url(@developer), notice: "Developer was successfully created." }
         format.json { render :show, status: :created, location: @developer }
       else
